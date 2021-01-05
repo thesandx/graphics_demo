@@ -3,7 +3,6 @@ canvas.width = 500;
 canvas.height = 500;
 
 document.querySelector("body").appendChild(canvas);
-debugger;
 const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
 gl.viewport(0, 0, canvas.width, canvas.height);
 
