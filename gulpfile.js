@@ -8,7 +8,7 @@ gulp.task('browser-sync', function ()
 		files: ["src/**/*.*"],
 		watch: true,
 		server: {
-			baseDir: "./src/"
+			baseDir: "./"
 		}
 	});
 });
