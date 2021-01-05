@@ -1,41 +1,44 @@
 There are two ways to run these samples : 
 
-1. Directly running the HTML/JS files
+### Directly running the HTML/JS files
 
 For this, you need to serve the static files using any server. eg.
 
-If you have a node setup, you can do `npm install --global http-server` and then run `http-server -p=8080`
+1. If you have a node setup, you can do :
+	1. `npm install --global http-server` 
+	1. `http-server`
 
-If you have Python installed locally : 
+1. If you have Python installed locally : 
 
-// If Python version 3.X is available :
+	1. If Python version 3.X is available :
+	`python3 -m http.server`
 
-`python3 -m http.server`
+	2. If Python version 2.X is available :
+	`python -m SimpleHTTPServer`
 
-else 
+### Using node based development setup 
 
-`python -m SimpleHTTPServer`
+1. Install latest node based on your OS : `https://nodejs.org/en/download/`
 
-2. Using node based setup 
+2. Then run `npm start`
 
-i. Install latest node based on your OS. 
-https://nodejs.org/en/download/
-
-ii. Then run `npm start`
-This will run a local server and open a new tab in browser showing the website. This setup has an advantage that making any change in the code and saving it will automatically trigger a browser refresh. As a pre-step, for the first run, this will install all the required packges.
+3. This will run a local server and open a new tab in browser showing the website. This setup has an advantage that making any change in the code and saving it will automatically trigger a browser refresh. As a pre-step, for the first run, this will install all the required packges.
 
 
 # WebGL Resources : 
 
 1.  https://webglfundamentals.org/
 
-2. HTML5DevConf May 2014: Nick Desaulniers, Mozilla: Raw WebGL
+2. Indigo Code : WebGL Tutorials
+https://www.youtube.com/playlist?list=PLjcVFFANLS5zH_PeKC6I8p0Pt1hzph_rt
+
+3. HTML5DevConf May 2014: Nick Desaulniers, Mozilla: Raw WebGL
 https://www.youtube.com/watch?v=H4c8t6myAWU
 
-3. An Introduction to WebGL Programming
+4. An Introduction to WebGL Programming
 https://www.youtube.com/watch?v=tgVLb6fOVVc
 
-4. WebGL Screencasts and Tutorials
+5. WebGL Screencasts and Tutorials
 https://www.youtube.com/playlist?list=PLPqKsyEGhUnaOdIFLKvdkXAQWD4DoXnFl
 
 # WebGL 2 Resources : 
@@ -44,9 +47,6 @@ https://www.youtube.com/playlist?list=PLPqKsyEGhUnaOdIFLKvdkXAQWD4DoXnFl
 
 2. Fun With WebGL 2.0
 https://www.youtube.com/playlist?list=PLMinhigDWz6emRKVkVIEAaePW7vtIkaIF
-
-3. Indigo Code : WebGL Tutorials
-https://www.youtube.com/playlist?list=PLjcVFFANLS5zH_PeKC6I8p0Pt1hzph_rt
 
 # Short overviews : 
 
