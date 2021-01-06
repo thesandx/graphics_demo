@@ -66,3 +66,14 @@ https://www.youtube.com/watch?v=zxQjlIViRBE
 https://www.youtube.com/watch?v=6-9XFm7XAT8
 
 3. https://learnopengl.com/
+
+
+
+# Doing animations in JS :
+
+1. https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+2. https://webglfundamentals.org/webgl/lessons/webgl-animation.html
+3. https://flaviocopes.com/requestanimationframe/
+4. https://stackoverflow.com/questions/38709923/why-is-requestanimationframe-better-than-setinterval-or-settimeout
+5. https://www.youtube.com/watch?v=8aGhZQkoFbQ&vl=en
+
