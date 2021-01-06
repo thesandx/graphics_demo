@@ -76,4 +76,5 @@ https://www.youtube.com/watch?v=6-9XFm7XAT8
 3. https://flaviocopes.com/requestanimationframe/
 4. https://stackoverflow.com/questions/38709923/why-is-requestanimationframe-better-than-setinterval-or-settimeout
 5. https://www.youtube.com/watch?v=8aGhZQkoFbQ&vl=en
+6. https://www.smashingmagazine.com/2017/09/animation-interaction-techniques-webgl/
 
