@@ -7,7 +7,7 @@ export default class Renderer
 
 		const gl = this.canvas.getContext("webgl") || this.canvas.getContext("experimental-webgl");
 
-		if (!gl) throw new Error("no webgl");
+		if (!gl) throw new Error("WebGL is not supported");
 		this.gl = gl;
 		this.resizeCanvas();
 		window.addEventListener('resize', () => this.resizeCanvas());
