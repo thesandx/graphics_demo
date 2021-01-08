@@ -18,7 +18,7 @@ For this, you need to serve the static files using any server. eg.
 
 ### Using node based development setup 
 
-1. Install latest node based on your OS : `https://nodejs.org/en/download/`
+1. Install latest node based on your OS : `https://nodejs.org/en/download/` and then install `npm`.
 
 2. Then run `npm start`
 
