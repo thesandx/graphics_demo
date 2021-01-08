@@ -41,6 +41,10 @@ export default class Shader
 			throw new Error(this.gl.getProgramInfoLog(program));
 		}
 
+		this.gl.deleteShader(this.vertexShader);
+		this.gl.deleteShader(this.fragmentShader);
+		this.gl.deleteProgram(this.shaderProgram);
+
 		return program;
 	}
 
