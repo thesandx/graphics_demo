@@ -20,4 +20,4 @@ function animate()
 	window.requestAnimationFrame(animate);
 }
 
-animate(0);
+animate();
