@@ -7,14 +7,7 @@ export default class Mesh
 			-0.5, 0.5, 0.0,
 			0.5, -0.5, 0.0,
 			-0.5, -0.5, 0.0,
-		]);
-
-		this.vertexColorData = new Float32Array([
-			1.0, 0.0, 0.0,
-			0.0, 1.0, 0.0,
-			0.0, 0.0, 1.0,
-			0.0, 0.0, 0.0,
-		]);
+		]);		
 
 		this.gl = gl;
 	}
