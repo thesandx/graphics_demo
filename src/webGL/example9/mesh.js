@@ -17,7 +17,7 @@ export default class Mesh
 		this.vertexAttributesBuffer = this.gl.createBuffer();
 		if (!this.vertexAttributesBuffer)
 		{
-			throw new Error("no webgl");
+			throw new Error("Buffer for vertex attributes could not be allocated");
 		}
 
 		this.transform = new Transform();
@@ -44,6 +44,7 @@ export default class Mesh
 
 	addVertex(position, color)
 	{
+		// New data can not be pushed to Typed arrays, we need to re-create them when required to edit
 		this.vertexAttributesData = new Float32Array([...this.vertexAttributesData, ...position, ...color])
 	}
 }

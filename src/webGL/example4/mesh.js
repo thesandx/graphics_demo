@@ -17,15 +17,22 @@ export default class Mesh
 		]);
 
 		this.gl = gl;
+
+		this.vertexPositionBuffer = this.gl.createBuffer();
+		if (!this.vertexPositionBuffer)
+		{
+			throw new Error("Buffer for vertex could not be allocated");
+		}
+
+		this.colorBuffer = this.gl.createBuffer();
+		if (!this.colorBuffer)
+		{
+			throw new Error("Buffer for color could not be allocated");
+		}
 	}
 
 	draw(shader)
 	{
-		const vertexPositionBuffer = this.gl.createBuffer();
-		if (!vertexPositionBuffer)
-		{
-			throw new Error("no webgl");
-		}
 		let elementPerVertex = 3;
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, vertexPositionBuffer);
 		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.vertexPositionData, this.gl.STATIC_DRAW);
@@ -34,13 +41,8 @@ export default class Mesh
 		this.gl.enableVertexAttribArray(aPosition);
 		this.gl.vertexAttribPointer(aPosition, elementPerVertex, this.gl.FLOAT, false, 0, 0);
 
-		const colorBuffer = this.gl.createBuffer();
-		if (!colorBuffer)
-		{
-			throw new Error("no webgl");
-		}
 		elementPerVertex = 3;
-		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, colorBuffer);
+		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.colorBuffer);
 		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.vertexColorData, this.gl.STATIC_DRAW);
 		
 		const aColor = shader.attribute("aColor");

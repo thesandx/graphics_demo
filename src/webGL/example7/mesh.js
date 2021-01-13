@@ -15,7 +15,7 @@ export default class Mesh
 		this.vertexAttributesBuffer = this.gl.createBuffer();
 		if (!this.vertexAttributesBuffer)
 		{
-			throw new Error("no webgl");
+			throw new Error("Buffer for vertex attributes could not be allocated");
 		}
 	}
 

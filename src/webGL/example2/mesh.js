@@ -10,17 +10,18 @@ export default class Mesh
 		]);
 
 		this.gl = gl;
+
+		this.buffer = this.gl.createBuffer();
+		if (!this.buffer)
+		{
+			throw new Error("Buffer could not be allocated");
+		}
 	}
 
 	draw(shader)
-	{
-		const buffer = this.gl.createBuffer();
-		if (!buffer)
-		{
-			throw new Error("no webgl");
-		}
+	{		
 		const elementPerVertex = 3;
-		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, buffer);
+		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.buffer);
 		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.vertexPositionData, this.gl.STATIC_DRAW);
 		
 		const aPosition = shader.attribute("aPosition");
