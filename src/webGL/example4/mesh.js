@@ -34,7 +34,7 @@ export default class Mesh
 	draw(shader)
 	{
 		let elementPerVertex = 3;
-		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, vertexPositionBuffer);
+		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.vertexPositionBuffer);
 		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.vertexPositionData, this.gl.STATIC_DRAW);
 		
 		const aPosition = shader.attribute("aPosition");
