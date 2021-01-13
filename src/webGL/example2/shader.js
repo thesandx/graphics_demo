@@ -21,6 +21,7 @@ export default class Shader
 
 		if (!this.gl.getShaderParameter(shader, this.gl.COMPILE_STATUS))
 		{
+			console.error(`Error while compiling shader ${shaderSrc}`);
 			throw new Error(this.gl.getShaderInfoLog(shader));
 		}
 
@@ -36,6 +37,7 @@ export default class Shader
 
 		if (!this.gl.getProgramParameter(program, this.gl.LINK_STATUS))
 		{
+			console.error(`Error while linking shaders`);
 			throw new Error(this.gl.getProgramInfoLog(program));
 		}
 

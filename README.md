@@ -80,3 +80,14 @@ https://www.youtube.com/watch?v=6-9XFm7XAT8
 5. https://www.youtube.com/watch?v=8aGhZQkoFbQ&vl=en
 6. https://www.smashingmagazine.com/2017/09/animation-interaction-techniques-webgl/
 
+# Learn Javascript 
+
+1. Javascript in an hour by Mosh
+
+https://www.youtube.com/watch?v=W6NZfCO5SIk
+https://www.youtube.com/watch?v=NCwa_xi0Uuc
+
+
+# Javascript Concepts
+
+1. Event loops http://latentflip.com/loupe
