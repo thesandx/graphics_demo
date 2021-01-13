@@ -72,9 +72,7 @@
 		throw new Error(gl.getProgramInfoLog(shaderProgram));
 	}
 
-	gl.useProgram(shaderProgram);
-
-	const aPosition = gl.getAttribLocation(shaderProgram, "aPosition");
+	gl.useProgram(shaderProgram);	
 
 	const vertexData = new Float32Array([
 		0.5, 0.5, 0.0,
@@ -92,9 +90,12 @@
 	}
 
 	gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+	// Transfer attribute data into VBO
 	gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.STATIC_DRAW);
 
-	// Getting attribute data into VBOs is only part of the story. You also have to tell WebGL to use the VBO as the source of values for the attribute
+	// You also have to tell WebGL to use the VBO as the source of values for the desired attribute
+	const aPosition = gl.getAttribLocation(shaderProgram, "aPosition");
+	// When we want to take the values of an attribute from a VBO, you must enable the use of a VBO for that attribute.
 	gl.enableVertexAttribArray(aPosition);
 	gl.vertexAttribPointer(aPosition, elementPerVertex, gl.FLOAT, false, 0, 0);
 	

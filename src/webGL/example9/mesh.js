@@ -25,13 +25,13 @@ export default class Mesh
 
 	draw(shader)
 	{
-		const aPosition = shader.attribute("aPosition");
 		const uModelViewProjectionMatrix = shader.uniform("uModelViewProjectionMatrix");
 		let elementPerVertex = 3;
-
+		
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.vertexAttributesBuffer);
 		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.vertexAttributesData, this.gl.DYNAMIC_DRAW);
-
+		
+		const aPosition = shader.attribute("aPosition");
 		this.gl.enableVertexAttribArray(aPosition);
 		this.gl.vertexAttribPointer(aPosition, elementPerVertex, this.gl.FLOAT, false, 6 * this.vertexAttributesData.BYTES_PER_ELEMENT, 0);
 

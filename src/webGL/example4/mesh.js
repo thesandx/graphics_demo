@@ -26,11 +26,11 @@ export default class Mesh
 		{
 			throw new Error("no webgl");
 		}
-		const aPosition = shader.attribute("aPosition");
 		let elementPerVertex = 3;
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, vertexPositionBuffer);
 		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.vertexPositionData, this.gl.STATIC_DRAW);
 		
+		const aPosition = shader.attribute("aPosition");
 		this.gl.enableVertexAttribArray(aPosition);
 		this.gl.vertexAttribPointer(aPosition, elementPerVertex, this.gl.FLOAT, false, 0, 0);
 
@@ -39,11 +39,11 @@ export default class Mesh
 		{
 			throw new Error("no webgl");
 		}
-		const aColor = shader.attribute("aColor");
 		elementPerVertex = 3;
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, colorBuffer);
 		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.vertexColorData, this.gl.STATIC_DRAW);
 		
+		const aColor = shader.attribute("aColor");
 		this.gl.enableVertexAttribArray(aColor);
 		this.gl.vertexAttribPointer(aColor, elementPerVertex, this.gl.FLOAT, false, 0, 0);
 

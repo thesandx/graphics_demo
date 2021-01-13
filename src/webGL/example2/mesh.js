@@ -19,11 +19,11 @@ export default class Mesh
 		{
 			throw new Error("no webgl");
 		}
-		const aPosition = shader.attribute("aPosition");
 		const elementPerVertex = 3;
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, buffer);
 		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.vertexPositionData, this.gl.STATIC_DRAW);
 		
+		const aPosition = shader.attribute("aPosition");
 		this.gl.enableVertexAttribArray(aPosition);
 		this.gl.vertexAttribPointer(aPosition, elementPerVertex, this.gl.FLOAT, false, 0, 0);
 
