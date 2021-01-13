@@ -41,6 +41,8 @@ https://www.youtube.com/watch?v=tgVLb6fOVVc
 5. WebGL Screencasts and Tutorials
 https://www.youtube.com/playlist?list=PLPqKsyEGhUnaOdIFLKvdkXAQWD4DoXnFl
 
+6. http://math.hws.edu/graphicsbook/c6/index.html
+
 # WebGL 2 Resources : 
 
 1. https://webgl2fundamentals.org/

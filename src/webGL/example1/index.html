@@ -84,7 +84,7 @@
 
 	const elementPerVertex = 3;
 
-	// Create and bind buffer
+	// Create and bind buffer (VBO)
 	const buffer = gl.createBuffer();
 	if (!buffer)
 	{
@@ -93,8 +93,11 @@
 
 	gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 	gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.STATIC_DRAW);
-	gl.vertexAttribPointer(aPosition, elementPerVertex, gl.FLOAT, false, 0, 0);
+
+	// Getting attribute data into VBOs is only part of the story. You also have to tell WebGL to use the VBO as the source of values for the attribute
 	gl.enableVertexAttribArray(aPosition);
+	gl.vertexAttribPointer(aPosition, elementPerVertex, gl.FLOAT, false, 0, 0);
+	
 
 	// Draw
 	gl.drawArrays(gl.POINTS, 0, vertexData.length / elementPerVertex);

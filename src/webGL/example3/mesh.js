@@ -24,8 +24,9 @@ export default class Mesh
 		let elementPerVertex = 3;
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, vertexPositionBuffer);
 		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.vertexPositionData, this.gl.STATIC_DRAW);
-		this.gl.vertexAttribPointer(aPosition, elementPerVertex, this.gl.FLOAT, false, 0, 0);
+		
 		this.gl.enableVertexAttribArray(aPosition);
+		this.gl.vertexAttribPointer(aPosition, elementPerVertex, this.gl.FLOAT, false, 0, 0);
 
 		shader.setUniform4f(vColor, new Float32Array([0.0, 1.0, 0.0, 1.0]))
 
