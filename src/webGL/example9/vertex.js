@@ -1,5 +1,5 @@
 const vertexShaderSrc = `      
-        attribute vec4 aPosition;  
+        attribute vec3 aPosition;  
 		uniform mat4 uModelViewProjectionMatrix;
   
         void main () {             

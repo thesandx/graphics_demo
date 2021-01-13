@@ -1,7 +1,7 @@
 const vertexShaderSrc = `      
-        attribute vec4 aPosition;  
+        attribute vec3 aPosition;  
         void main () {             
-          gl_Position = aPosition; 
+          gl_Position = vec4(aPosition, 1.0); 
 		  gl_PointSize = 5.0;     
         }                          
 	  `;
