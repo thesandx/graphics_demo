@@ -3,7 +3,7 @@ const vertexShaderSrc = `
 		uniform mat4 uModelViewProjectionMatrix;
   
         void main () {             
-          gl_Position = uModelViewProjectionMatrix * aPosition; 
+          gl_Position = uModelViewProjectionMatrix * vec4(aPosition, 1.0); 
 		  gl_PointSize = 5.0;     
         }                          
 	  `;
