@@ -13,6 +13,26 @@ export default class Renderer
 		window.addEventListener('resize', () => this.resizeCanvas());
 	}
 
+	mouseToClipCoord(mouseX,mouseY) {
+
+		// convert the position from pixels to 0.0 to 1.0
+		mouseX = mouseX / this.canvas.width;
+		mouseY = mouseY / this.canvas.height;
+
+		// convert from 0->1 to 0->2
+		mouseX = mouseX * 2;
+		mouseY = mouseY * 2;
+
+		// convert from 0->1 to 0->2
+		mouseX = mouseX - 1;
+		mouseY = mouseY - 1;
+
+		// flip the axis	
+		mouseY = -mouseY; // Coordinates in clip space
+
+		return [mouseX, mouseY]
+	}
+
 	webGlContext()
 	{
 		return this.gl;
