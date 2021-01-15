@@ -25,7 +25,7 @@ export default class Mesh
 
 	draw(shader)
 	{
-		const uModelViewProjectionMatrix = shader.uniform("uModelViewProjectionMatrix");
+		const uModelTransformMatrix = shader.uniform("uModelTransformMatrix");
 		let elementPerVertex = 3;
 		
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.vertexAttributesBuffer);
@@ -35,7 +35,7 @@ export default class Mesh
 		this.gl.enableVertexAttribArray(aPosition);
 		this.gl.vertexAttribPointer(aPosition, elementPerVertex, this.gl.FLOAT, false, 6 * this.vertexAttributesData.BYTES_PER_ELEMENT, 0);
 
-		shader.setUniformMatrix4fv(uModelViewProjectionMatrix, this.transform.getMVPMatrix());
+		shader.setUniformMatrix4fv(uModelTransformMatrix, this.transform.getMVPMatrix());
 
 		this.gl.drawArrays(this.gl.LINE_STRIP, 0, this.vertexAttributesData.length / (2 * elementPerVertex));
 		// this.gl.drawArrays(this.gl.TRIANGLE_STRIP, 0, this.vertexAttributesData.length / (2 * elementPerVertex));
