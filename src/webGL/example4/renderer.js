@@ -20,8 +20,8 @@ export default class Renderer
 
 	resizeCanvas()
 	{
-		this.canvas.width = window.innerWidth;
-		this.canvas.height = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
+		this.canvas.width = Math.min(window.innerWidth,window.innerHeight);
+		this.canvas.height = this.canvas.width
 		this.gl.viewport(0, 0, this.gl.canvas.width, this.gl.canvas.height);
 	}
 
