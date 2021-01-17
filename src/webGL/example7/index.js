@@ -39,3 +39,4 @@ function animate()
 }
 
 animate();
+shader.delete();

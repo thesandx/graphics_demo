@@ -43,7 +43,6 @@ export default class Shader
 
 		this.gl.deleteShader(this.vertexShader);
 		this.gl.deleteShader(this.fragmentShader);
-		this.gl.deleteProgram(this.shaderProgram);
 
 		return program;
 	}
@@ -56,5 +55,10 @@ export default class Shader
 	use()
 	{
 		this.gl.useProgram(this.program);
+	}
+
+	delete()
+	{
+		this.gl.deleteProgram(this.program);
 	}
 }

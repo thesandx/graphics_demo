@@ -9,7 +9,6 @@ const gl = renderer.webGlContext();
 
 const shader = new Shader(gl, vertexShaderSrc, fragmentShaderSrc);
 shader.use();
-
 const mesh = new Mesh(gl);
 
 //Draw loop
@@ -21,3 +20,4 @@ function animate()
 }
 
 animate();
+shader.delete();
