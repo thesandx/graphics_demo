@@ -12,29 +12,21 @@ const shader = new Shader(gl, vertexShaderSrc, fragmentShaderSrc);
 shader.use();
 
 const mesh = new Mesh(gl);
-let translation = vec3.create();
+let translation = vec3.fromValues(.5,.5,0);
 let rotationAngle = 0;
-let rotationAxis = vec3.create();
-let scale = vec3.create();
+let rotationAxis = vec3.fromValues(0,0,1);
+let scale = vec3.fromValues(.5,.5,1);
+
+mesh.transform.setTranslate(translation);
+mesh.transform.setScale(scale);
 
 //Draw loop
 function animate()
 {
-	vec3.set(translation, .5, 0, 0);
-	mesh.transform.setTranslate(translation);
-
-	vec3.set(rotationAxis, 0, 0, 1);
-	mesh.transform.setRotate(rotationAxis, rotationAngle)
-
-	vec3.set(scale, .5, .5, .5);
-	mesh.transform.setScale(scale);
-
-	mesh.transform.updateMVPMatrix();
-
+	mesh.transform.setRotate(rotationAxis, rotationAngle);
 	rotationAngle += .01;
-
-	if (rotationAngle > Math.PI)
-		rotationAngle = 0;
+	
+	mesh.transform.updateMVPMatrix();
 
 	renderer.clear();
 	mesh.draw(shader);
