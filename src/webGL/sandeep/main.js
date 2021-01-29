@@ -139,7 +139,7 @@ window.onload = function() {
                     if(mode==1) {
                         movetToOrigin(currentSel);
                         scale(currentSel,0.1);
-                        moveBack(currentSel,0.5,0.5);
+                        moveBack(currentSel,currentX,currentY);
                     }
                     break;
                 case "-":
@@ -147,7 +147,7 @@ window.onload = function() {
                     if(mode==1){
                         movetToOrigin(currentSel);
                         scale(currentSel,-0.1);
-                        moveBack(currentSel,0.5,0.5);
+                        moveBack(currentSel,currentX,currentY);
                     }
                     break;
                 case "x":
