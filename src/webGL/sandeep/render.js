@@ -6,7 +6,10 @@ export default class Render
 		this.canvas = document.createElement("canvas");
 		document.querySelector("body").appendChild(this.canvas);
 
-		const gl = this.canvas.getContext("webgl") || this.canvas.getContext("experimental-webgl");
+		//this.canvas = document.querySelector('canvas');
+
+
+		const gl = this.canvas.getContext("webgl",{preserveDrawingBuffer: true, antialiasing: false}) || this.canvas.getContext("experimental-webgl");
 
 		if (!gl) throw new Error("WebGL is not supported");
 		this.gl = gl;
