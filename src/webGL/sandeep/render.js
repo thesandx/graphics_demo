@@ -3,10 +3,10 @@ export default class Render
 	constructor()
 	{
         
-		this.canvas = document.createElement("canvas");
-		document.querySelector("body").appendChild(this.canvas);
+		// this.canvas = document.createElement("canvas");
+		// document.querySelector("body").appendChild(this.canvas);
 
-		//this.canvas = document.querySelector('canvas');
+		this.canvas = document.querySelector('canvas');
 
 
 		const gl = this.canvas.getContext("webgl",{preserveDrawingBuffer: true, antialiasing: false}) || this.canvas.getContext("experimental-webgl");
