@@ -1,4 +1,4 @@
-import {vec3,mat4} from 'https://cdn.skypack.dev/gl-matrix';
+
 var vertexShaderText = 
 [
 'precision mediump float;',
